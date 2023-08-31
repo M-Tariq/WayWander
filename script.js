@@ -89,7 +89,6 @@ class App {
 
   _getLocalStorage() {
     const workoutsData = JSON.parse(localStorage.getItem("workouts"));
-    console.log("workoutsData:", workoutsData);
     if (!workoutsData) {
       return;
     }
@@ -205,7 +204,6 @@ class App {
     //   rerender marker
     this.renderWorkoutMarker(workout);
     this.renderWorkout(workout);
-    console.log(this.workouts);
   }
 
   renderWorkoutMarker(workout) {
@@ -227,7 +225,6 @@ class App {
   }
 
   renderWorkout(workout) {
-    console.log(workout);
     let html = `
       <li class="workout workout--${workout.type}" data-id="${workout.id}">
         <h2 class="workout__title">${workout.description}</h2>
